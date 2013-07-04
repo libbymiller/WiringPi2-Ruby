@@ -6,10 +6,9 @@ module WiringPi
 
     attr_reader :modules, :pins
 
-    def initialize(&block)
+    def initialize
       Wiringpi2.wiringPiSetup
       @pins = Array.new
-      instance_eval &block
     end
 
     def read_byte(starting_pin)
