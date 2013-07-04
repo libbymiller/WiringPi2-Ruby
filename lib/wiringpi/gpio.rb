@@ -100,6 +100,10 @@ module WiringPi
 	  Wiringpi2.shiftIn(dpin,cpin,order)
 	end
 
+        def pullUpDnControl(pin,mode)
+           Wiringpi2.pullUpDnControl(pin, mode)
+        end
+
     def add_module(module_instance)
       @modules = Array.new if @modules.nil?
 
